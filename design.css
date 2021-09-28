@@ -1,0 +1,41 @@
+.f{
+    width: 70%;
+    height: 100%;
+}
+h3{
+    text-align: center;
+    background-color: blueviolet;
+    padding: 40px;
+    color: seashell;
+}
+
+.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+ 
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  .example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    color: white;
+  }
+
+table{
+  text-align: center;
+}
+
+#resultset{
+  text-align: center;
+  color: red;
+}
+#a{
+  border: none;
+  background-color: white;
+}
+
+  
