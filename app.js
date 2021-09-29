@@ -13,11 +13,11 @@ addtaskbtn.addEventListener("click", function(){
     entryval= entry.value;
     exitval= exit.value;
     if(ownerval.trim()!=0 && carval.trim()!=0 && licenceplateval.trim()!=0 && entryval.trim()!=0 && exitval.trim()!=0){
-        let a = localStorage.getItem("b");
-        let c = localStorage.getItem("d");
-        let e = localStorage.getItem("f");
-        let g =localStorage.getItem("h");
-        let i = localStorage.getItem("j");
+        let a = localStorage.getItem("ownername");
+        let c = localStorage.getItem("carname");
+        let e = localStorage.getItem("numberplate");
+        let g =localStorage.getItem("entrydate");
+        let i = localStorage.getItem("exitdate");
         if(a == null){
             taskObj = [];
              taskObj2 = [];
@@ -37,11 +37,11 @@ addtaskbtn.addEventListener("click", function(){
         taskObj3.push(licenceplateval);
         taskObj4.push(entryval);
         taskObj5.push(exitval);
-        localStorage.setItem("b", JSON.stringify(taskObj));
-        localStorage.setItem("d", JSON.stringify(taskObj2));
-        localStorage.setItem("f", JSON.stringify(taskObj3));
-        localStorage.setItem("h", JSON.stringify(taskObj4));
-        localStorage.setItem("j", JSON.stringify(taskObj5));
+        localStorage.setItem("ownername", JSON.stringify(taskObj));
+        localStorage.setItem("carname", JSON.stringify(taskObj2));
+        localStorage.setItem("numberplate", JSON.stringify(taskObj3));
+        localStorage.setItem("entrydate", JSON.stringify(taskObj4));
+        localStorage.setItem("exitdate", JSON.stringify(taskObj5));
         alert("Succefully Added");
         ownerval.value = '';
         carval.value = '';
@@ -56,7 +56,7 @@ function searchplate(){
    let searchval= document.getElementById("search").value;
   
 
-   let e = localStorage.getItem("f");
+   let e = localStorage.getItem("numberplate");
    let information = document.getElementById("information");
 let resultset = document.getElementById("resultset");
     let c=1;
@@ -81,11 +81,11 @@ let resultset = document.getElementById("resultset");
 
 function display(index){
 
-    let a = localStorage.getItem("b");
-    let c = localStorage.getItem("d");
-    let e = localStorage.getItem("f");
-    let g =localStorage.getItem("h");
-    let i = localStorage.getItem("j");
+    let a = localStorage.getItem("ownername");
+    let c = localStorage.getItem("carname");
+    let e = localStorage.getItem("numberplate");
+    let g =localStorage.getItem("entrydate");
+    let i = localStorage.getItem("exitdate");
     if(a == null){
         taskObj = [];
          taskObj2 = [];
@@ -123,11 +123,11 @@ function display(index){
 function deletion(index){
     var r=confirm("Are you sure you want to delete this from Parking Lot?");
     if(r == true){
-        let a = localStorage.getItem("b");
-        let c = localStorage.getItem("d");
-        let e = localStorage.getItem("f");
-        let g =localStorage.getItem("h");
-        let i = localStorage.getItem("j");
+        let a = localStorage.getItem("ownername");
+        let c = localStorage.getItem("carname");
+        let e = localStorage.getItem("numberplate");
+        let g =localStorage.getItem("entrydate");
+        let i = localStorage.getItem("exitdate");
        let  taskObj = JSON.parse(a);
       let  taskObj2 = JSON.parse(c);
       let  taskObj3 =JSON.parse(e);
@@ -138,11 +138,11 @@ function deletion(index){
         taskObj3.splice(index,1);
         taskObj4.splice(index,1);        
         taskObj5.splice(index,1);
-        localStorage.setItem("b", JSON.stringify(taskObj));
-        localStorage.setItem("d", JSON.stringify(taskObj2));
-        localStorage.setItem("f", JSON.stringify(taskObj3));
-        localStorage.setItem("h", JSON.stringify(taskObj4));
-        localStorage.setItem("j", JSON.stringify(taskObj5));
+        localStorage.setItem("ownername", JSON.stringify(taskObj));
+        localStorage.setItem("carname", JSON.stringify(taskObj2));
+        localStorage.setItem("numberplate", JSON.stringify(taskObj3));
+        localStorage.setItem("entrydate", JSON.stringify(taskObj4));
+        localStorage.setItem("exitdate", JSON.stringify(taskObj5));
         let information = document.getElementById("information");
         let resultset = document.getElementById("resultset");
         resultset.innerHTML='';
@@ -153,11 +153,11 @@ function deletion(index){
 function showtask(){
 
 
-        let a = localStorage.getItem("b");
-        let c = localStorage.getItem("d");
-        let e = localStorage.getItem("f");
-        let g =localStorage.getItem("h");
-        let i = localStorage.getItem("j");
+        let a = localStorage.getItem("ownername");
+        let c = localStorage.getItem("carname");
+        let e = localStorage.getItem("numberplate");
+        let g =localStorage.getItem("entrydate");
+        let i = localStorage.getItem("exitdate");
         if(a == null){
             taskObj = [];
              taskObj2 = [];
